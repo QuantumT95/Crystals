@@ -1,24 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>simple crystal game</title>
-  
-  <style type="text/css">
-    .crystal-image {
-      width: 300px;
-      height: 300px;
-    }
-  </style>
+  <title>Simple crystal game</title>
 
 </head>
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 <body>
+  <div id='container'> 
+    <div id='parentTitleBox'>
+      <div class='titleBox'>Crystal Collectors!</div>
+    </div>
 
-  <h1>Number to Guess: <span id="number-to-guess"></span></h1>
+    <div id="instructionBox">
+      <p> You will be given a random number at the start of the game. </p>
 
-  <!-- Note that this div is now empty. We will fill it dynamically -->
-  <div id="crystals">
+      <p> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. </p>
+
+      <p> You win the game by matching your total score to random number, you lose the game if your total score goes above the random number. </p>
+
+      <p> The value of each crystal is hidden from you until you click on it. </p>
+
+      <p> Each time when the game starts, the game will change the values of each crystal. </p>
+    </div>
+
+    <div id='parentRanWlBox'>
+
+      <div class="ranNumBox">
+      </div>
+      <div class="winLoseBox">
+        <p>Wins: </p>
+          <p class="win">0</p>
+        <p>Loses: </p>
+          <p class="loss">0</p>
+      </div>
+    </div>
+
+    <!-- Note that this div is now empty. We will fill it dynamically -->
+    <div id="parentGameButtons">
+      <div type="button" class="box b1 crystal1" value='1'>
+        <img src="http://orig15.deviantart.net/cb1b/f/2015/125/4/f/chaos_emerald_red_sprite_by_banjo2015-d8sadag.png" >
+      </div>
+      <div type="button" class="box b2 crystal2" value='2'>
+        <img src="http://orig04.deviantart.net/8f64/f/2015/125/4/a/chaos_emerald_green_sprite_by_banjo2015-d8sae5s.png">
+      </div>
+      <div type="button" class="box  b3 crystal3" value='3'>
+        <img src="http://orig13.deviantart.net/f6c1/f/2015/125/9/6/chaos_emerald_turquoise_sprite_by_banjo2015-d8sacvn.png" >
+      </div>
+      <div type="button" class="box b4 crystal4" value='4'>
+        <img src="http://orig11.deviantart.net/7006/f/2015/125/3/a/chaos_emerald_yellow_sprite_by_banjo2015-d8sadoo.png">
+      </div>
+    </div>
+    
+    <div id="parentScore">  
+      <div class="score">
+        <p>Your total score is: </p>
+      </div>
+    
+      <div class="scoreDisplay">
+      <p class=scoreDisplayChild></p>
+      </div>
+    </div>
+
   </div>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="assets/javascript/game.js"></script>
+
 </body>
 </html>
